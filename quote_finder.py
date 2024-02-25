@@ -15,7 +15,7 @@ def quote_finder():
                 if quotes:
                     print(f"Quotes of author {author.fullname}:")
                     for quote in quotes:
-                        print(quote.quote.encode('utf-8'))
+                        print(quote.quote)
                 else:
                     print("No quotes found for author:", author_name)
             else:
@@ -26,7 +26,7 @@ def quote_finder():
             if quotes:
                 print(f"Quotes with tag '{tag}':")
                 for quote in quotes:
-                    print(quote.quote.encode('utf-8'))
+                    print(quote.quote)
             else:
                 print("No quotes found with tag:", tag)
         elif command.startswith("tags:"):
@@ -35,7 +35,7 @@ def quote_finder():
             if quotes:
                 print(f"Quotes with tags '{', '.join(tags)}':")
                 for quote in quotes:
-                    print(quote.quote.encode('utf-8'))
+                    print(quote.quote)
             else:
                 print("No quotes found with tags:", ', '.join(tags))
         elif command == "exit":
